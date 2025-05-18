@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { MOVIES_OPTIONS } from '../utils/constants';
-import { addNowPlayingMovies } from '../utils/moviesSlice';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { MOVIES_OPTIONS } from "../utils/constants";
+import { addNowPlayingMovies } from "../utils/moviesSlice";
 
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
@@ -11,12 +11,12 @@ const useNowPlayingMovies = () => {
       MOVIES_OPTIONS
     );
     const json = await data.json();
-    console.log(json.results);
+
     dispatch(addNowPlayingMovies(json.results));
   };
   useEffect(() => {
     getNowPlayingMovies();
   }, []);
-}
+};
 
-export default useNowPlayingMovies
+export default useNowPlayingMovies;

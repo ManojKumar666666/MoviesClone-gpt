@@ -1,6 +1,5 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import { IMG_CDN_URL } from "../utils/constants";
 
 const MovieList = ({ title, movies }) => {
   return (
